@@ -1,4 +1,4 @@
-# MY COOL COLLECTION OF BASH SCRIPTS THAT I USE FOR EVERYDAY USE
+# MY COOL COLLECTION OF BASH SCRIPTS THAT I USE EVERYDAY ! ! ! ! 
 ## File Sync
 Synchronises file with external drive. Change $DEST to point to your own drive.
 ### Dependencies
