@@ -21,7 +21,7 @@ if [ -d $DEST ]; then
     rsync -Pruv $DEST/* $SOURCE/
     rsync -Pruv $DEST/.bashrc $SOURCE/.bashrc
 
-    notify-send -a 'File Synchroniser' -i /home/alzy/.local/share/icons/Papirus/64x64/apps/synology-cloud-station-drive.svg 'Update Completed' 'Restart is recommended'
+    notify-send -a 'File Synchroniser' -i /home/alzy/.local/share/icons/Papirus/64x64/apps/synology-cloud-station-drive.svg 'Synchronisation Completed'
     paplay /usr/share/sounds/Oxygen-K3B-Finish-Success.ogg
 else
     echo -e "Folder not found"
