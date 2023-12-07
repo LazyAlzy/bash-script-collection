@@ -2,7 +2,7 @@
 
 SOURCE=/home/$USER
 
-DEST=/media/SanDisk
+DEST=#/path/to/drive
 
 if [ -d $DEST ]; then
     echo -e "\n Now Synchronising Documents/\n=====================================" 
