@@ -6,22 +6,23 @@ DEST=/media/SanDisk
 
 if [ -d $DEST ]; then
     echo -e "\n Now Synchronising Documents/\n=====================================" 
-    rsync -ruv $SOURCE/Documents $DEST/
+    rsync -Pruv $SOURCE/Documents $DEST/
 
     echo -e "\n Now Synchronising Downloads/\n====================================="
-    rsync -ruv $SOURCE/Downloads $DEST/
+    rsync -Pruv $SOURCE/Downloads $DEST/
 
     echo -e "\n Now Synchronising Passwords/\n====================================="
-    rsync -ruv $SOURCE/.keepassxc $DEST/
+    rsync -Pruv $SOURCE/.keepassxc $DEST/
 
     echo -e "\n Now Synchronising BashRC/\n====================================="
-    rsync -ruv $SOURCE/.bashrc $DEST/
+    rsync -Pruv $SOURCE/.bashrc $DEST/.bashrc
 
     echo -e "\n Now Reversing Operations\n====================================="
-    rsync -ruv $DEST/* $SOURCE/
+    rsync -Pruv $DEST/* $SOURCE/
+    rsync -Pruv $DEST/.bashrc $SOURCE/.bashrc
 
     notify-send -a 'File Synchroniser' -i /home/alzy/.local/share/icons/Papirus/64x64/apps/synology-cloud-station-drive.svg 'Update Completed' 'Restart is recommended'
     paplay /usr/share/sounds/Oxygen-K3B-Finish-Success.ogg
 else
-    echo -e "Folder not mounted"
+    echo -e "Folder not found"
 fi
