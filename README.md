@@ -1,4 +1,4 @@
-# MY COOL COLLECTION OF BASH SCRIPTS THAT I USE EVERYDAY ! ! ! ! 
+# Collection of personal bash scripts 
 ## File Sync
 Synchronises file with external drive. Change $DEST to point to your own drive.
 ### Dependencies
