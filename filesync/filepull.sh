@@ -16,7 +16,7 @@ if [ -d $DEST ]; then
     rsync -Pruv $DEST/* $SOURCE/
     rsync -Pruv $DEST/.bashrc $SOURCE/.bashrc
 
-    notify-send -a 'File Synchroniser' -i /home/alzy/.local/share/icons/Papirus/64x64/apps/synology-cloud-station-drive.svg 'Synchronisation Completed'
+    notify-send -a 'File Synchroniser' 'Synchronisation Completed'
 
 else
     echo "Folder not found"
