@@ -16,12 +16,10 @@ if [ -d $DEST ]; then
     echo -e "\n Pushing Files to Sync Drive/\n=====================================" 
     rsync -Pruv $SOURCE/Documents $DEST/
     rsync -Pruv $SOURCE/Downloads $DEST/
-    #rsync -Pruv $SOURCE/Pictures $DEST/
-    #rsync -Pruv $SOURCE/Music $DEST/
-    #rsync -Pruv $SOURCE/Videos $DEST/
-    rsync -Pruv $SOURCE/.keepassxc $DEST/
+    rsync -Pruv $SOURCE/Pictures $DEST/
+    rsync -Pruv $SOURCE/Music $DEST/
+    rsync -Pruv $SOURCE/Videos $DEST/
     rsync -Pruv $SOURCE/.bashrc $DEST/.bashrc
-    rsync -Pruv $SOURCE/Games/BackUps $DEST/Games/
 
     notify-send -a 'File Synchroniser' -i /home/alzy/.local/share/icons/Papirus/64x64/apps/synology-cloud-station-drive.svg 'Synchronisation Completed'
 else
