@@ -2,7 +2,7 @@
 
 SOURCE=/home/$USER
 DIRECTORY=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-
+touch $DIRECTORY/ext-drive.txt
 DEST=$(<$DIRECTORY/ext-drive.txt)
 
 if [ -z "$DEST" ]; then
