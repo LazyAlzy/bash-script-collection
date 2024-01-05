@@ -14,7 +14,6 @@ fi
 if [ -d $DEST ]; then
     echo -e "\n Pulling Files from Sync Drive\n====================================="
     rsync -Pruv $DEST/* $SOURCE/
-    rsync -Pruv $DEST/.bashrc $SOURCE/.bashrc
 
     notify-send -a 'File Synchroniser' 'Synchronisation Completed'
 
