@@ -18,7 +18,6 @@ if [ -d $DEST ]; then
     rsync -Pruv $SOURCE/Pictures $DEST/
     rsync -Pruv $SOURCE/Music $DEST/
     rsync -Pruv $SOURCE/Videos $DEST/
-    rsync -Pruv $SOURCE/.bashrc $DEST/.bashrc
 
     notify-send -a 'File Synchroniser' 'Synchronisation Completed'
 
